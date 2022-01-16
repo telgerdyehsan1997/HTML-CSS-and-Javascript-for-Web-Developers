@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.row{
+    margin: 25px 0;
+}
+#title-row{
+    text-align: center;
+    font-size: 1.75em;
+}
+#cards-row{
+    margin-top: 50px;
+}
+.card{
+    background-color: gray;
+    border: 3px solid black;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+.card-title{
+    text-align: center;
+    border: 3px solid black;
+    float: right;
+    width: 120px;
+    margin-top: -3px;
+    margin-right: -3px;
+    margin-bottom: 10px;
+    font-size: 1.25em;
+}
+.card-body{
+    padding: 0 15px;
+    clear:right;
+}
+/* .card:nth-child(even) .card-title{
+    color: white;
+} */
+
+
+#chicken-card .card-title{
+    background-color: #d59898;
+}
+#beef-card .card-title{
+    color: white;
+    background-color: #c14543;
+}
+#sushi-card .card-title{
+    background-color: #e5d198;
+}
+
+@media (min-width:992px) {
+    .card{
+        width: 32%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    .card{
+        /* this line must be working because (2*48%)+(4*1%)=100% but it's not and will put the second item below the first one*/
+        /* width: 48%; */
+        width: 47%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    
+    .card:last-child:nth-child(odd){
+        width: 96.5%;
+    }
+}
+@media (max-width:767px) {
+    .card{
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
