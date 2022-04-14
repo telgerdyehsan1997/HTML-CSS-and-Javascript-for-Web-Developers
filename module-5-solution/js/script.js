@@ -103,7 +103,7 @@ function buildAndShowHomeHTML (categories) {
       // variable's name implies it expects.
       var chosenCategory=chooseRandomCategory(categories);
       console.log(`chosenCategory :${chosenCategory}`);
-      var chosenCategoryShortName = "L"
+      var chosenCategoryShortName = chosenCategory.short_name;
 
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
